@@ -1,7 +1,17 @@
-# Created by https://www.gitignore.io/api/jekyll
-### Jekyll ###
-_site/
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
-# End of https://www.gitignore.io/api/jekyll
+# hidden files
+.*
+
+# python compiled files
+*.pyc
+
+# jekyll debug
+_site
+
+# Jeykll Gemfile.lock
+Gemfile.lock
+
+# yui-compressor
+*.jar
+
+# bundle cache
+vendor

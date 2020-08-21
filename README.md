@@ -1,96 +1,195 @@
-# Helium Jekyll
-## A new Bootstrap 4 theme
+# Chirpy
 
-## The project is no longer mantained
+🌏 English • [简体中文](docs/README_zh-CN.md)
 
-<a href="https://jekyll-themes.com">
-    <img src="https://img.shields.io/badge/featured%20on-JT-red.svg" height="20" alt="Jekyll Themes Shield" >
-</a>
+[![Build Status](https://github.com/cotes2020/jekyll-theme-chirpy/workflows/build/badge.svg?branch=master&event=push)](https://github.com/cotes2020/jekyll-theme-chirpy/actions?query=branch%3Amaster+event%3Apush)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8220b926db514f13afc3f02b7f884f4b)](https://app.codacy.com/manual/cotes2020/jekyll-theme-chirpy?utm_source=github.com&utm_medium=referral&utm_content=cotes2020/jekyll-theme-chirpy&utm_campaign=Badge_Grade_Dashboard)
+[![GitHub license](https://img.shields.io/github/license/cotes2020/jekyll-theme-chirpy.svg)](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/LICENSE)
+[![996.icu](https://img.shields.io/badge/link-996.icu-%23FF4D5B.svg)](https://996.icu)
 
-Helium is a fast, modern and configurable [Jekyll](http://jekyllrb.com/) theme with some tricks up it's sleeve. It has a live theme switcher and it's main blog layout display prominent hero images for posts with colored overlays and nice animations.
+A minimal, sidebar, responsive web design Jekyll theme, focusing on text presentation, aim to help you easily record and share your knowledge. [Live Demo »](https://chirpy.cotes.info)
 
-[Bootstrap theme source](https://uideck.com/products/helium-ui-kit/)
+[![Devices Mockup](https://raw.githubusercontent.com/cotes2020/jekyll-theme-chirpy/master/assets/img/sample/devices-mockup.png)](https://chirpy.cotes.info)
 
-![helium sample](https://raw.githubusercontent.com/heliumjk/heliumjk.github.io/master/assets/images/helium-screenshot.jpg)
-![helium theme](https://raw.githubusercontent.com/heliumjk/heliumjk.github.io/master/assets/images/helium-screenshot1.jpg)
+## Table of Contents
+
+* [Features](#features)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contributing](#contributing)
+* [Credits](#credits)
+* [Support](#support)
+* [License](#license)
 
 ## Features
-Though minimalistic-looking by nature, dactl is easily configurable and includes quite a lot of niceties:
 
-Main features:
-* [Bootstrap 4](https://v4-alpha.getbootstrap.com/)
-* [Font Awesome](http://fontawesome.io/)
-* 100+ UI Blocks
-* Responsive design
+* Pinned Posts
+* Configurable theme mode
+* Double-level Categories
+* Last modified date for posts
+* Table of Contents
+* Automatically recommend related posts
+* Syntax highlighting
+* Mathematical expressions
+* Search
+* Atom Feeds
+* Disqus Comments
+* Google Analytics
+* GA Pageviews reporting (Advanced)
+* SEO and Performance Optimization
 
-Jekyll-specific features:
-* Fully compatible with Jekyll 3.x and GitHub Pages
-* SEO optimized
-* [Google Analytics](https://www.google.com/analytics/) support
-* [Google AdSense](https://www.google.com/adsense/start/) support
-* [Disqus](https://disqus.com/) comments support
-
-Other features:
-* Blog page
-* Landing page samples
-* Tags functionality and tags pages
-* Link posts functionality
-* Mobile slider scrolling
-* Emoji support ⚡️⚡️⚡️ by copy paste from [getemoji](http://getemoji.com/)
-
-Some of the features listed above can be easily configured or disabled by you.
-
-## Information about Helium
-At it's core, dactl is a forked version of [sentenza](https://github.com/sentenza/jekyll-material-design) but it has been almost entirely rewritten from scratch.  
-I have just started my journey in the world of web development, learning new things on the way.  
-Looking for a way to put my newly acquired skills to test I found Jekyll and I quickly realized that it's going to be a good learning experience since I don't like building 'dummy' projects.  
-I've built this theme as a way to develop my skills further.
-
-You can find credits at the bottom of this Readme file.  
-**All** feedback is welcome, both positive and negative.
 
 ## Installation
-### Running locally
-Assuming you've got Jekyll [installed](https://jekyllrb.com/docs/installation/), clone or download this repo, `cd` into the folder and run `jekyll serve`.
 
-### Hosting on GitHub
-Fork this repo and rename it to `yourusername.github.io`... and edit the `_config.yaml` file whit your github address and your links (such as social media username, email, name, ecc.)!  
-Your new helium-themed Jekyll blog should be up and running at yourusername.github.io.  
+[Fork **Chirpy**](https://github.com/cotes2020/jekyll-theme-chirpy/fork) on GitHub, and clone the fork to local by:
+
+```terminal
+$ git clone git@github.com:<username>/jekyll-theme-chirpy -b master --single-branch
+```
+
+### Setting up the local envrionment
+
+If you would like to run or build the project on your local machine, please follow the [Jekyll Docs](https://jekyllrb.com/docs/installation/) to complete the installation of `Ruby`, `RubyGems` and `Bundler`.
+
+Before running or building for the first time, please complete the installation of the Jekyll plugins. Go to the root directory of project and run:
+
+```terminal
+$ bundle install
+```
+
+`bundle` will automatically install all the dependencies specified by `Gemfile`.
+
+What's more, in order to generate some extra files (*categories*, *tags* and *last modified list*), we need to use some tool scripts. If your machine is running Debian or macOS, make sure that [GNU coreutils](https://www.gnu.org/software/coreutils/) is installed. Otherwise, install by:
+
+* Debian
+
+  ```console
+  $ sudo apt-get install coreutils
+  ```
+
+* macOS
+
+  ```console
+  $ brew install coreutils
+  ```
 
 
-## Additional information about some features
-### Hero images and blog layout
-Liquid 'script' which is used to append correct hero image and overlay color as set in post YAML Front matter was written by me and while it's really basic it functions properly.  
-You can read more about it and see the code in `include/utils/hero.html`.
+## Usage
 
-#### Tags & Tags Pages
-Tags and tag pages are supported by using Jekyll's native collections functionality.  
+Running [**Chirpy**](https://github.com/cotes2020/jekyll-theme-chirpy/) requires some extra files, which cannot be generated by Jekyll native commands, so please strictly follow the methods mentioned below to run or deploy your website.
+
+### Initialization
+
+Go to the root directory of the project and start initialization:
+
+```console
+$ bash tools/init.sh
+```
+
+> If you not intend to deploy it on GitHub Pages, append parameter option `--no-gh` at the end of the above command.
+
+What it does is:
+
+1. Remove some files or directories from your repository:
+	* `.travis.yml`
+	* files under `_posts`
+	* folder `docs` 
+
+2. If you use the `--no-gh` option, the directory `.github` will be deleted. Otherwise, setup the GitHub Action workflow by removing extension `.hook` of `.github/workflows/pages-deploy.yml.hook`, and then remove the other files and directories in folder `.github`.
+
+3. Automatically create a commit to save the changes.
+
+### Configuration
+
+Generally, go to `_config.yml` and configure the variables as needed. Some of them are typical options:
+
+* `url`
+* `avatar`
+* `timezone`
+* `theme_mode`
+
+
+### Run Locally
+
+You may want to preview the site contents before publishing, so just run it by:
+
+```terminal
+$ bash tools/run.sh
+```
+
+Then open a browser and visit to <http://localhost:4000>.
+
+Few days later, you may find that the file changes does not refresh in real time by using `run.sh`. Don't worry, the advanced option `-r` (or `--realtime`) will solve this problem, but it requires [**fswatch**](http://emcrisostomo.github.io/fswatch/) to be installed on your machine.
+
+### Deployment
+
+Before the deployment begins, checkout the file `_config.yml` and make sure the `url` is configured correctly. Furthermore, if you prefer the [*project site*](https://help.github.com/en/github/working-with-github-pages/about-github-pages#types-of-github-pages-sites) and don't use a custom domain, or you want to visit your website with a base url on a web server other than **GitHub Pages**, remember to change the `baseurl` to your project name that starting with a slash. For example, `/project`.
+
+Assuming you have already gone through the [initialization](#initialization), you can now choose any of the following methods to deploy your website.
+
+#### Deploy on GitHub Pages
+
+For security reasons, GitHub Pages build runs on `safe` mode, which restricts us from using tool scripts to generate additional page files. Therefore, we can use GitHub Actions to build the site, store the built site files on a new branch, and use that branch as the source of the Pages service.
+
+1. Push any commit to `origin/master` to trigger the GitHub Actions workflow. Once the build is complete, a new remote branch called `gh-pages` will appear, which is used to store the built site files.
+2. Unless you prefer to project sites, rename your repository to `<username>.github.io` on GitHub.
+3. Choose branch `gh-pages` as the [publishing source](https://docs.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) for your GitHub Pages site.
+4. Visit your website at the address indicated by GitHub.
+
+#### Deploy on Other Platforms
+
+On platforms other than GitHub, e.g. GitLab, we cannot enjoy the convenience of **GitHub Actions**. However, we have a tool to make up for this shortcoming.
+
+Commit the changes of your repository first, then run the publish script:
+
+```console
+$ bash tools/publish.sh
+```
+
+> Please note that the *Recent Update* list requires the latest git-log date of posts, thus make sure the changes in `_posts` have been committed before running this command.
+
+It will automatically generates the *Latest Modified Date* and *Categories / Tags* page for the posts and submit a commit, then push to `origin/master`. Its output is similar to the following log:
+
+```terminal
+[INFO] Success to update lastmod for 4 post(s).
+[INFO] Succeed! 3 category-pages created.
+[INFO] Succeed! 4 tag-pages created.
+[INFO] Published successfully!
+```
+
+Lastly, enable the pages service according to the instructions of the platform you choose.
+
+#### Deploy on Private Server
+
+In the root of the source project, build your site by:
+
+```console
+$ bash tools/build.sh -d /path/to/site/
+```
+
+The generated site files will be placed in the root of `/path/to/site/`. Now you should upload those files to your web server, such as Nginx.
+
+### Documentation
+
+For more details and the better reading experience, please check out the [tutorials on demo site](https://chirpy.cotes.info/categories/tutorial/). In the meanwhile, a copy of the tutorial is also available on the [Wiki](https://github.com/cotes2020/jekyll-theme-chirpy/wiki).
+
+## Contributing
+
+The old saying, "Two heads are better than one." Consequently, welcome to report bugs, improve code quality or submit a new feature. For more information, see [contributing guidelines](.github/CONTRIBUTING.md).
+
 
 ## Credits
-### Resources used
-- [Helium B4](https://uideck.com/products/helium-ui-kit/)
-- [Font Awesome](http://fontawesome.io/)
-- [Bootstrap 4](https://v4-alpha.getbootstrap.com/)
 
-### Inspiration and thoughtful code-jacking
-Inspiration and bits of things listed below are present inside dactl's code:
-- [Daktilo](https://github.com/kronik3r/daktilo) - dactl is based on Daktilo and inherits it's one-column layout.
-- [Hydejack](https://github.com/qwtel/hydejack/) - I've learned a lot about Jekyll when I took apart [@qwtel](https://github.com/qwtel/)'s excellent fork of [Hyde](https://github.com/poole/hyde) theme. I embraced his more partials = everything is easier to edit policy. Hydejack theme gave me an idea on how to create hero images liquid scripting, loading google fonts and using rem's/em's and more.
-- [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes) - This guy makes awesome themes and writes a lot about Jekyll and it's more obscure use cases on his blog, [Made Mistakes](https://mademistakes.com). Looking through his theme's code - Minimal Mistakes in particular - gave me lot of information about how to build a robust theme and how to make it configurable within `_config.yml`
-- [Trophy](https://github.com/thomasvaeth/trophy-jekyll) - Link border slide animation SASS mixin which I slightly modified to be able to easily change the direction of the animation.
-- Various blog posts about Jekyll and [Stackoverflow](https://www.stackoverflow.com) posts with useful [Liquid](https://github.com/Shopify/liquid) snippets.
+This theme is mainly built with [Jekyll](https://jekyllrb.com/) ecosystem, [Bootstrap](https://getbootstrap.com/), [Font Awesome](https://fontawesome.com/) and some other wonderful tools (their copyright information can be found in the relevant files).
+
+:tada: Thanks to all the volunteers who contributed to this project, their GitHub IDs are on [this list](https://github.com/cotes2020/jekyll-theme-chirpy/graphs/contributors). Also, I won't forget those guys who submitted the issues or unmerged PR because they reported bugs, shared ideas or inspired me to write more readable documentation.
+
+
+## Support
+
+If you enjoy this theme or find it helpful, please consider becoming my sponsor, I'd really appreciate it! Click the button <kbd>:heart: Sponsor</kbd> at the top of the [Home Page](https://github.com/cotes2020/jekyll-theme-chirpy) and choose a link that suits you to donate; this will encourage and help me better maintain the project.
+
 
 ## License
-All parts of helium Jekyll theme are free to use and abuse under the open-source [MIT license](http://opensource.org/licenses/mit-license.php).
 
-## TO DO
-- [ ] Add Ads Block to home page 
-- [ ] Minimize `.css` in `<head>` and all images for faster load times
-- [ ] 404 page styles
-- [ ] Create hightlight style for code parts
-
-## Help out
-Im [Antonio Trento](https://antoniotrento.github.io) and I'm looking for funds to be able to open my IT development company with many on-site projects, unfortunately they are hardly feasible without collaboration and an economic base.
-
-If you want to contribute you can donate ethereum or bitcoin:
-- [Donate Bitcoins](https://blockchain.info/address/1B9rDoFCndbsKXL9QiefUcUGUbJH9Y1i6M)
+This work is published under [MIT](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/LICENSE) License.
