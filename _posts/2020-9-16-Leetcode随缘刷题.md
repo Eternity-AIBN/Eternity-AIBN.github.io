@@ -1,4 +1,4 @@
-# Leetcode 每日一题
+# Leetcode 随缘刷题
 
 [TOC]
 
