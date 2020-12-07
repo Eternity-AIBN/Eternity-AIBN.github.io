@@ -106,3 +106,41 @@
 ##### 解法
 
 1. 
+
+
+
+
+
+#### [8. 字符串转换整数 (atoi)](https://leetcode-cn.com/problems/string-to-integer-atoi)  2020-12-2
+
+
+
+
+
+#### [324. 摆动排序 II](https://leetcode-cn.com/problems/wiggle-sort-ii/) 2020-12-2
+
+
+
+1. 排序 + 插入，注意应该是==倒插！！！==
+
+   为何？比如：$a≤b≤c≤d$，正常处理为：$a,c,b,d$，b和c在一块，可能出现问题；若倒插，则为$b,d,a,c$，中间两个数为a和d，差距比b和c大，不会出现问题。
+
+2. 更好的解法：快排partition的应用......竟然没想到
+
+
+
+
+
+#### [91. 解码方法](https://leetcode-cn.com/problems/decode-ways/)  2020-12-3
+
+
+
+
+
+#### [233. 数字 1 的个数](https://leetcode-cn.com/problems/number-of-digit-one/) 2020-12-7
+
+糊里糊涂一点点硬编码，超过100%.....
+<img src="C:\Users\15542\AppData\Roaming\Typora\typora-user-images\image-20201207205745217.png" alt="image-20201207205745217" style="zoom:50%;" />
+
+主要思路：分位数计算，比如输入12345，依次计算0 ~ 10000、0 ~ 1000、0 ~ 100、0 ~ 10的结果，需要注意的是，在计算0 ~ 10000时，还需加上2345+1（10000及以上有2345+1个数，会带有“10000”的“1”）
+
