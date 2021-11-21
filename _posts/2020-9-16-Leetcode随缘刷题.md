@@ -1,9 +1,3 @@
-# Leetcode 随缘刷题
-
-[TOC]
-
-
-
 #### [239. 滑动窗口最大值](https://leetcode-cn.com/problems/sliding-window-maximum/) 2020-9-16
 
 ##### 题目描述
