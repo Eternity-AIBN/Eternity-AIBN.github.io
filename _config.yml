@@ -83,6 +83,10 @@ theme_mode: dual
 # boolean type, global switch for ToC in posts.
 toc: true
 
+math: true
+
+mermaid: true
+
 paginate: 10
 
 markdown: kramdown
