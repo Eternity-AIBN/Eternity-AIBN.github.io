@@ -3,6 +3,7 @@ title: Leetcode随缘刷题
 date: 2020-09-16 00:00:00 +0800
 categories: [Data structure and algorithm, Leetcode]
 tags: [leetcode]     # TAG names should always be lowercase
+math: true
 ---
 
 
@@ -123,7 +124,7 @@ tags: [leetcode]     # TAG names should always be lowercase
 
 
 
-1. 排序 + 插入，注意应该是__倒插！！！__
+1. 排序 + 插入，注意应该是**倒插！！！**
 
    为何？比如：$a≤b≤c≤d$，正常处理为：$a,c,b,d$，b和c在一块，可能出现问题；若倒插，则为$b,d,a,c$，中间两个数为a和d，差距比b和c大，不会出现问题。
 
