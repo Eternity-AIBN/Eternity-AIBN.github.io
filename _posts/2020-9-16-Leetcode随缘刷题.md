@@ -1,7 +1,8 @@
 ---
-category: Data structure and algorithm
-tag: Leetcode
-
+title: Leetcode随缘刷题
+date: 2020-09-16 00:00:00 +0800
+categories: [Data structure and algorithm, Leetcode]
+tags: [leetcode]     # TAG names should always be lowercase
 ---
 
 
